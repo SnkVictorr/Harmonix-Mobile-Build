@@ -47,19 +47,6 @@ const HomeScreen = () => {
     router.navigate("./(tabs)/carrinho");
   };
 
-  useEffect(() => {
-    const backAction = () => {
-      BackHandler.exitApp(); // Fecha o app ao pressionar o botão de voltar
-      return true; // Impede o comportamento padrão (voltar)
-    };
-
-    const backHandler = BackHandler.addEventListener(
-      "hardwareBackPress",
-      backAction
-    );
-
-    return () => backHandler.remove();
-  }, []);
   return (
     <SafeAreaView edges={["top"]} style={styles.container}>
       <View

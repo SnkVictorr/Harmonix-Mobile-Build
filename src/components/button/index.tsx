@@ -32,7 +32,7 @@ export default function Botao({ rota, estilo, texto, mensagem }: BotaoProps) {
       if (router.canGoBack()) {
         router.navigate(rota);
       } else {
-        router.replace(rota);
+        router.push(rota);
       }
     } catch (error) {
       console.error("Erro ao navegar:", error);

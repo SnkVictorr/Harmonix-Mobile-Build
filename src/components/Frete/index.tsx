@@ -74,7 +74,7 @@ export default function Frete() {
           style={{
             flex: 1,
             color: "#fff",
-            paddingVertical: 8,
+            paddingVertical: 10,
           }}
         />
       </View>

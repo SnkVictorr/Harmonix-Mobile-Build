@@ -29,7 +29,7 @@ export default function ProductItem1({
     <View style={styles.container && newStyles}>
       <Pressable
         style={[styles.ProductItem, productItemStyle]}
-        onPress={() => router.push(`/productDetail/${id}`)}
+        onPress={() => router.push(`/(tabs)/productDetail/${id}`)}
       >
         <View style={styles.content}>
           {/* <- AGORA COM flex: 1 */}

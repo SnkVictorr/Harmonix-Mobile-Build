@@ -1,4 +1,11 @@
-import { FlatList, Text, TouchableOpacity, View, Image } from "react-native";
+import {
+  FlatList,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  Pressable,
+} from "react-native";
 import React, { useCallback, useEffect, useState } from "react";
 import { QuicheMedium } from "../../Quiche/quiche-medium";
 import { OutfitText } from "../../OutfitText";
@@ -188,12 +195,15 @@ export default function CardCarrinho() {
                         clienteId as number
                       )
                     }
+                    style={{
+                      width: 18,
+                      height: 18,
+                      marginTop: 25,
+                      alignSelf: "flex-start",
+                    }}
+                    hitSlop={{ top: 0, bottom: 0, left: 0, right: 0 }}
                   >
-                    <Trash
-                      color="#ff4444"
-                      size={18}
-                      style={{ marginTop: 25 }}
-                    />
+                    <Trash color="#ff4444" size={18} />
                   </TouchableOpacity>
                   <MaxMinus
                     quantidade={item.quantidade}

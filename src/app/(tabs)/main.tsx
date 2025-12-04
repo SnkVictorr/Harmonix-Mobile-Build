@@ -44,7 +44,7 @@ const HomeScreen = () => {
   }, []);
 
   const handleCartPress = () => {
-    router.navigate("./(tabs)/carrinho");
+    router.navigate("/(tabs)/carrinho");
   };
 
   return (

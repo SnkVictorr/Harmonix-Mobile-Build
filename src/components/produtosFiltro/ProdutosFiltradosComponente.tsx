@@ -2,27 +2,24 @@ import {
   ActivityIndicator,
   FlatList,
   Pressable,
-  ScrollView,
   Text,
   TextInput,
   View,
 } from "react-native";
 import React, { Component, useEffect, useState } from "react";
-import SearchBar from "@/src/components/searchBar";
 import getProducts from "@/src/app/services/products/get";
 import { Produto } from "@/src/app/types/produto";
-import { styles as styles2 } from "@/src/components/main/ProductList1/style";
+
 import { styles } from "./style";
 import stylesSearch from "../searchBar/style";
 import ProductItem1 from "@/src/components/main/ProductItem1";
-import { NonBinary, Scroll } from "lucide-react-native";
-import { produtos as produtosData } from "@/src/components/ProductData/data";
 
 import colors from "@/src/app/styles/colors";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { QuicheBold } from "../Quiche/quiche-bold";
 import BackButton from "../backButton";
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 export default function ProdutosFiltradosComponente({
   id_principal,
   id_marca,
@@ -107,7 +104,7 @@ export default function ProdutosFiltradosComponente({
             <>
               <View style={stylesSearch.searchContainer}>
                 <BackButton cor={colors.gray[400]} />
-                <Pressable style={stylesSearch.searchBar}>
+                <Pressable onPress={() => {router.push("/SearchScreen")}} style={stylesSearch.searchBar}>
                   <TextInput
                     placeholder="Buscar produtos..."
                     placeholderTextColor="#888"

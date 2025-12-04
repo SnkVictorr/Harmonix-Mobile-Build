@@ -425,7 +425,7 @@ export default function Perfil() {
   // ---------------------- ENDEREÇO ----------------------
   if (section === "endereco") {
     return (
-      <SafeAreaView style={localStyles.container}>
+      <SafeAreaView edges={["top"]} style={localStyles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <TouchableOpacity onPress={() => setSection("menu")}>
             <Text style={localStyles.back}>
@@ -441,7 +441,12 @@ export default function Perfil() {
               type={"zip-code"}
               style={localStyles.input}
               value={cep}
-              onChangeText={(t) => setCep(t)}
+              onChangeText={(t) => {
+                setCep(t);
+                if (t.length === 9) {
+                  handleBuscarCep(t);
+                }
+              }}
               placeholder="00000-000"
               placeholderTextColor="#999"
             />

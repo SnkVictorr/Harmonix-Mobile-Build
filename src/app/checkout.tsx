@@ -63,7 +63,9 @@ export default function CheckoutScreen() {
         }}
       >
         <ActivityIndicator color="#fff" size="large" />
-        <OutfitText style={{ color: "#fff", marginTop: 12 }}>Carregando...</OutfitText>
+        <OutfitText style={{ color: "#fff", marginTop: 12 }}>
+          Carregando...
+        </OutfitText>
       </View>
     );
   }
@@ -111,7 +113,10 @@ export default function CheckoutScreen() {
               style={{ width: 80, height: 80, borderRadius: 6 }}
             />
             <View style={{ flex: 1, marginLeft: 12 }}>
-              <OutfitText style={{ color: "#fff", fontSize: 15 }} numberOfLines={2}>
+              <OutfitText
+                style={{ color: "#fff", fontSize: 15 }}
+                numberOfLines={2}
+              >
                 {item.produto}
               </OutfitText>
 
@@ -253,9 +258,16 @@ export default function CheckoutScreen() {
           backgroundColor: "#c7a315",
           padding: 16,
           alignItems: "center",
+          borderRadius: 8,
         }}
       >
-        <OutfitText style={{ fontSize: 16, fontWeight: "bold", color: colors.gray[100] }}>
+        <OutfitText
+          style={{
+            fontSize: 16,
+            fontWeight: "bold",
+            color: colors.gray[100],
+          }}
+        >
           Finalizar Pedido
         </OutfitText>
       </TouchableOpacity>
